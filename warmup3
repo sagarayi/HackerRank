@@ -1,0 +1,58 @@
+
+
+import java.io.*;
+
+/**
+ *
+ * @author Admin
+ */
+public class prof {
+    public static boolean solve(int n,int k)throws IOException
+    {int count = 0;
+        int[] num=new int[n-1];
+        boolean res=true;
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+    
+        for(int j=0;j<n;j++)
+        {
+           int temp=Integer.parseInt(br.readLine());
+                    if(temp<=0)
+                    {
+                        count++;
+                    }
+                    
+        }
+        if(count<k)
+            return false;
+        else
+            return true;
+    }
+    public static void main(String []args)throws IOException
+    {   int n,k;
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        int t=Integer.parseInt(br.readLine());
+        boolean[] res=new boolean[t];
+        for(int i=0;i<t;i++)
+        {
+                    n = Integer.parseInt(br.readLine());
+                    k=Integer.parseInt(br.readLine());
+                    res[i]=solve(n,k);
+        }
+        for(int i=0;i<t;i++)
+        {
+        if(res[i]==true)
+        {
+            System.out.println("YES");
+            
+        }
+        else
+            System.out.println("NO");
+        }
+        
+        
+        
+        
+        
+    }
+    
+}
