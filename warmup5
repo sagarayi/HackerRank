@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+from operator import xor 
+
+def maxXor(l, r):
+        big=0
+        for i in range(l,r):
+                for j in range(l,r):
+                        x=xor(i,j)
+                        if big<=x:
+                                big=x
+        return big
+
+if __name__ == '__main__':
+  l = int(input())
+  r = int(input())
+  print(maxXor(l, r))
