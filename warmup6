@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+        
+        int t,n,i,j;
+        int ser[100000];
+        int en,ex,m=7;
+        scanf("%d",&n);
+        scanf("%d",&t);
+        int res[t];
+        for(i=0;i<n;i++)
+                scanf("%d",&ser[i]);
+        for(i=0;i<t;i++)
+         {       scanf("%d",&en);
+                scanf("%d",&ex);
+                m=3;
+                for(j=en;j<=ex;j++)
+                {       
+                        if(ser[j]<m)
+                        {
+                                m=ser[j];
+                        }
+                }
+                res[i]=m;
+         }
+         for(i=0;i<t;i++)
+                printf("%d\n",res[i]);
+         
+             
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}
