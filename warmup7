@@ -1,0 +1,27 @@
+i=[None]*1000
+
+def solve(n,k):
+        count =0
+        b = list(map(int, input().strip().split(" ")))
+        for x in range(0,n):
+                #i[x]=input().split()
+                #num=int(i[x])
+                if b[x]<=0:
+	                   count+=1
+        if count<k:
+                return True
+        else:
+                return False
+
+def main():
+    n,k=input().split()
+    a,b=int(n),int(k)
+    res=solve(a,b)
+    if res==True:
+                print ("YES")
+    else:
+                print ("NO")
+t=input()
+s=int(t)
+for x in range(0,s):
+        main()
