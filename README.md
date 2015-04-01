@@ -1,2 +1,1 @@
-# hacker_rank
-hacker rank problems
+# Learning Python programming language by solving problems from hackerrank.com
